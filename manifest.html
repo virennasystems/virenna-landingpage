@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="noindex" />
+  <title>Ethik-Manifest – VIRENNA</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .lang-switch { display: flex; gap: 1rem; margin-bottom: 1rem; }
+    .lang-switch button {
+      padding: 0.4rem 0.8rem;
+      border: none;
+      background: var(--gray-3);
+      color: var(--gray-10);
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+  </style>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll(".lang-switch button");
+      const contents = document.querySelectorAll(".lang-content");
+      buttons.forEach(btn => btn.addEventListener("click", () => {
+        contents.forEach(c => c.classList.remove("active"));
+        document.querySelector(`.lang-content.${btn.dataset.lang}`).classList.add("active");
+        buttons.forEach(b => b.setAttribute("aria-pressed", false));
+        btn.setAttribute("aria-pressed", true);
+      }));
+      document.querySelector(".lang-switch button[data-lang='de']").click();
+    });
+  </script>
+</head>
+<body>
+  <main class="section-content" role="main">
+    <h1>Ethik-Manifest</h1>
+    <div class="lang-switch" role="tablist" aria-label="Sprachauswahl">
+      <button data-lang="de" aria-pressed="true">Deutsch</button>
+      <button data-lang="en" aria-pressed="false">English</button>
+    </div>
+
+    <!-- DEUTSCH -->
+    <div class="lang-content de" lang="de">
+      <section>
+        <h2>VIRENNA – Ein ethisches System</h2>
+        <p>
+          VIRENNA wurde aus der Erfahrung von Menschen mit schweren chronischen Erkrankungen heraus entwickelt –
+          getragen von Prinzipien der <strong>Würde, Transparenz, Partizipation und Reflexivität</strong>.
+        </p>
+
+        <h3>Unsere Grundprinzipien</h3>
+        <ul>
+          <li><strong>Würde:</strong> Der Mensch steht im Zentrum – nicht seine Daten.</li>
+          <li><strong>Transparenz:</strong> Keine versteckten Prozesse, kein Tracking, keine Werbemechanismen.</li>
+          <li><strong>Partizipation:</strong> Mitgestaltung durch Betroffene, Angehörige und medizinisches Fachpersonal.</li>
+          <li><strong>Reflexivität:</strong> Permanente Weiterentwicklung im Dialog mit der Community.</li>
+        </ul>
+
+        <p>
+          VIRENNA verzichtet bewusst auf Suggestion, Gamification oder Nutzermanipulation. Es geht nicht um Verhaltenstraining –
+          sondern um Verständnis, Kontexte und Optionen.
+        </p>
+
+        <p>
+          <strong>Keine Ausbeutung. Keine Algorithmen ohne Feedback. Kein Datenverkauf.</strong>
+        </p>
+
+        <p>
+          Das Manifest ist Teil unseres Quellcodes – <a href="https://github.com/virenna/manifest">öffentliche Version auf GitHub</a>
+        </p>
+      </section>
+    </div>
+
+    <!-- ENGLISH -->
+    <div class="lang-content en" lang="en">
+      <section>
+        <h2>VIRENNA – An Ethical System</h2>
+        <p>
+          VIRENNA was developed from the lived experience of people with severe chronic illnesses –
+          based on the principles of <strong>dignity, transparency, participation, and reflexivity</strong>.
+        </p>
+
+        <h3>Our Core Principles</h3>
+        <ul>
+          <li><strong>Dignity:</strong> The person is central – not their data.</li>
+          <li><strong>Transparency:</strong> No hidden processes, no tracking, no ad mechanics.</li>
+          <li><strong>Participation:</strong> Co-creation by patients, caregivers, and health professionals.</li>
+          <li><strong>Reflexivity:</strong> Ongoing development in dialogue with the community.</li>
+        </ul>
+
+        <p>
+          VIRENNA consciously avoids suggestion, gamification, or user manipulation. It’s not about behavior control –
+          it’s about understanding, context, and informed options.
+        </p>
+
+        <p>
+          <strong>No exploitation. No algorithms without feedback. No data sales.</strong>
+        </p>
+
+        <p>
+          The manifesto is part of our source code – <a href="https://github.com/virenna/manifest">public version on GitHub</a>
+        </p>
+      </section>
+    </div>
+
+    <p><a href="index.html">Zurück zur Startseite</a></p>
+  </main>
+</body>
+</html>
