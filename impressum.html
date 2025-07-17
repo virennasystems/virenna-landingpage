@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="noindex" />
+  <title>Impressum – VIRENNA</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .lang-switch { display: flex; gap: 1rem; margin-bottom: 1rem; }
+    .lang-switch button {
+      padding: 0.4rem 0.8rem;
+      border: none;
+      background: var(--gray-3);
+      color: var(--gray-10);
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+  </style>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll(".lang-switch button");
+      const contents = document.querySelectorAll(".lang-content");
+      buttons.forEach(btn => btn.addEventListener("click", () => {
+        contents.forEach(c => c.classList.remove("active"));
+        document.querySelector(`.lang-content.${btn.dataset.lang}`).classList.add("active");
+        buttons.forEach(b => b.setAttribute("aria-pressed", false));
+        btn.setAttribute("aria-pressed", true);
+      }));
+      document.querySelector(".lang-switch button[data-lang='de']").click();
+    });
+  </script>
+</head>
+<body>
+  <main class="section-content" role="main">
+    <h1>Impressum</h1>
+    <div class="lang-switch" role="tablist" aria-label="Sprachauswahl">
+      <button data-lang="de" aria-pressed="true">Deutsch</button>
+      <button data-lang="en" aria-pressed="false">English</button>
+    </div>
+
+    <!-- DEUTSCH -->
+    <div class="lang-content de" lang="de">
+      <section>
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <p>
+          Verantwortlich für den Inhalt dieser Website:
+        </p>
+        <address>
+          VIRENNA – Ethikorientiertes MedTech Projekt<br/>
+          Kontakt: <a href="mailto:hallo@virenna.org">hallo@virenna.org</a><br/>
+          Sitz: Deutschland (in Vorbereitung als gemeinnützige Struktur)
+        </address>
+
+        <h2>Haftung für Inhalte</h2>
+        <p>
+          Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehmen wir jedoch keine Gewähr.
+        </p>
+
+        <h2>Haftung für Links</h2>
+        <p>
+          Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. 
+          Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
+        </p>
+
+        <h2>Urheberrecht</h2>
+        <p>
+          Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. 
+          Beiträge Dritter sind als solche gekennzeichnet.
+        </p>
+      </section>
+    </div>
+
+    <!-- ENGLISCH -->
+    <div class="lang-content en" lang="en">
+      <section>
+        <h2>Legal Disclosure (Impressum)</h2>
+        <p>
+          Information according to § 5 TMG:
+        </p>
+        <address>
+          VIRENNA – Ethics-Oriented MedTech Project<br/>
+          Contact: <a href="mailto:hallo@virenna.org">hallo@virenna.org</a><br/>
+          Location: Germany (nonprofit registration in progress)
+        </address>
+
+        <h2>Liability for content</h2>
+        <p>
+          The contents of our website were created with utmost care. 
+          However, we cannot guarantee the accuracy, completeness or timeliness of the content.
+        </p>
+
+        <h2>Liability for links</h2>
+        <p>
+          Our site contains links to external third-party websites. We have no influence on their contents. 
+          Therefore, we cannot assume any liability for these external contents.
+        </p>
+
+        <h2>Copyright</h2>
+        <p>
+          Content and works on these pages created by the site operators are subject to German copyright law. 
+          Third-party contributions are marked as such.
+        </p>
+      </section>
+    </div>
+
+    <p><a href="index.html">Zurück zur Startseite</a></p>
+  </main>
+</body>
+</html>
