@@ -1,4 +1,6 @@
-name: 🔍 Lighthouse Audit
+- name: 🌐 Run Audit (Multi-Page)
+  run: |
+    npx lhci autorun --config=lighthouserc.json
 
 on:
   push:
