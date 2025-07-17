@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="robots" content="noindex" />
+  <title>AGB – VIRENNA</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .lang-switch { display: flex; gap: 1rem; margin-bottom: 1rem; }
+    .lang-switch button {
+      padding: 0.4rem 0.8rem;
+      border: none;
+      background: var(--gray-3);
+      color: var(--gray-10);
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .lang-content { display: none; }
+    .lang-content.active { display: block; }
+  </style>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll(".lang-switch button");
+      const contents = document.querySelectorAll(".lang-content");
+      buttons.forEach(btn => btn.addEventListener("click", () => {
+        contents.forEach(c => c.classList.remove("active"));
+        document.querySelector(`.lang-content.${btn.dataset.lang}`).classList.add("active");
+        buttons.forEach(b => b.setAttribute("aria-pressed", false));
+        btn.setAttribute("aria-pressed", true);
+      }));
+      document.querySelector(".lang-switch button[data-lang='de']").click();
+    });
+  </script>
+</head>
+<body>
+  <main class="section-content" role="main">
+    <h1>Allgemeine Geschäftsbedingungen (AGB)</h1>
+    <div class="lang-switch" role="tablist" aria-label="Sprachauswahl">
+      <button data-lang="de" aria-pressed="true">Deutsch</button>
+      <button data-lang="en" aria-pressed="false">English</button>
+    </div>
+
+    <!-- DEUTSCH -->
+    <div class="lang-content de" lang="de">
+      <section>
+        <h2>1. Geltungsbereich</h2>
+        <p>
+          Diese AGB gelten für die Nutzung der VIRENNA-Webseite und -Anwendungen in der jeweils bereitgestellten Form.
+          Die Nutzung ist ausschließlich zu nicht-kommerziellen, gesundheitsunterstützenden Zwecken vorgesehen.
+        </p>
+
+        <h2>2. Leistungsbeschreibung</h2>
+        <p>
+          VIRENNA bietet Tools zur Dokumentation, Analyse und Kontextualisierung von Gesundheitsdaten an – werbefrei, datensouverän und ethisch entwickelt.
+        </p>
+
+        <h2>3. Haftung</h2>
+        <p>
+          VIRENNA ersetzt keine medizinische Diagnose oder Therapie. Die Nutzung erfolgt auf eigene Verantwortung.
+          Für Schäden, die durch fehlerhafte Interpretation entstehen, übernehmen wir keine Haftung.
+        </p>
+
+        <h2>4. Datenschutz</h2>
+        <p>
+          Es gelten die Regeln unserer <a href="datenschutz.html">Datenschutzerklärung</a>. Keine personenbezogene Analyse erfolgt ohne Zustimmung.
+        </p>
+
+        <h2>5. Änderungen</h2>
+        <p>
+          Änderungen der AGB werden auf dieser Seite kommuniziert. Stand: 17. Juli 2025
+        </p>
+      </section>
+    </div>
+
+    <!-- ENGLISCH -->
+    <div class="lang-content en" lang="en">
+      <section>
+        <h2>1. Scope</h2>
+        <p>
+          These Terms of Service apply to the use of the VIRENNA website and applications as provided.
+          Use is intended exclusively for non-commercial, health-supportive purposes.
+        </p>
+
+        <h2>2. Description of Services</h2>
+        <p>
+          VIRENNA offers tools for documenting, analyzing, and contextualizing health data — ad-free, privacy-focused, and ethically designed.
+        </p>
+
+        <h2>3. Liability</h2>
+        <p>
+          VIRENNA does not replace any medical diagnosis or treatment. Use is at your own risk.
+          We accept no liability for damage resulting from misinterpretation.
+        </p>
+
+        <h2>4. Privacy</h2>
+        <p>
+          Our <a href="datenschutz.html">Privacy Policy</a> applies. No personal data analysis occurs without consent.
+        </p>
+
+        <h2>5. Changes</h2>
+        <p>
+          Changes to these Terms will be communicated on this page. Last updated: July 17, 2025
+        </p>
+      </section>
+    </div>
+
+    <p><a href="index.html">Zurück zur Startseite</a></p>
+  </main>
+</body>
+</html>
