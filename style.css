@@ -20,6 +20,16 @@
     color: var(--gray-1);
     background-color: var(--gray-10);
   }
+  .text-muted {
+    color: #cccccc; /* oder eine gut kontrastierende Variante */
+  }
+
+  .icon svg {
+    fill: #ffffff; /* oder passende Akzentfarbe */
+  }
+  }
+
+  .i
 }
 :root {
   --background: #ffffff;
@@ -177,6 +187,13 @@ header {
 .qr-download img {
   max-width: 160px;
   border: 1px solid var(--gray-4);
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 0.75rem 0;
+  color: var(--gray-7);
 }
 
 /* ────────────── FOOTER ────────────── */
