@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="VIRENNA – Digitale Begleiterin für Menschen mit ME/CFS, POTS, Long COVID u.a. Ethisch. Werbefrei. Barrierefrei." />
+  <meta name="robots" content="index, follow" />
+  <title>VIRENNA – Ethische Gesundheitsassistenz</title>
+
+  <!-- Open Props (Design Tokens, Darkmode Ready) -->
+  <link rel="stylesheet" href="https://unpkg.com/open-props" />
+  <link rel="stylesheet" href="https://unpkg.com/open-props/normalize.min.css" />
+
+  <!-- Eigene Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Accessibility Tools (auditfähig) -->
+  <script defer src="https://unpkg.com/tota11y"></script>
+
+  <!-- Favicon & Manifest -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+</head>
+
+<body>
+  <!-- Skiplink für Screenreader & Keyboard -->
+  <a class="skip-link" href="#main-content">Direkt zum Inhalt</a>
+
+  <!-- 🔹 Header & Navigation -->
+  <header role="banner">
+    <nav role="navigation" aria-label="Hauptnavigation" class="nav-wrapper">
+      <div class="logo">VIRENNA</div>
+      <ul class="nav-links">
+        <li><a href="#intro">Was ist VIRENNA?</a></li>
+        <li><a href="#features">Funktionen</a></li>
+        <li><a href="#ethics">Ethik</a></li>
+        <li><a href="#contact">Zugang</a></li>
+      </ul>
+
+      <!-- Sprachumschalter (Technik vorbereitet) -->
+      <div class="language-switch" role="group" aria-label="Sprachauswahl">
+        <button aria-pressed="true">DE</button>
+        <button aria-pressed="false">EN</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 🔹 Hero-Sektion -->
+  <main id="main-content" role="main">
+    <section id="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">VIRENNA – Deine ethische Gesundheitsassistenz</h1>
+        <p>
+          VIRENNA ist ein KI-gestütztes Unterstützungssystem für Menschen mit schweren chronischen Erkrankungen.
+          Es dokumentiert Symptome, erkennt Zusammenhänge und erleichtert Gespräche mit Ärzt:innen – 
+          ohne Tracking, ohne Werbung, ohne Druck.
+        </p>
+        <p><strong>Entwickelt aus Betroffenenerfahrung. Geleitet von Prinzipien. Bereit für dein Leben.</strong></p>
+        <div class="cta-buttons">
+          <a href="#intro" class="btn primary">Mehr erfahren</a>
+          <a href="#contact" class="btn secondary">Jetzt testen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🔹 Was ist VIRENNA? -->
+    <section id="intro" aria-labelledby="intro-heading">
+      <div class="section-content">
+        <h2 id="intro-heading">Was ist VIRENNA?</h2>
+        <p>
+          VIRENNA ist eine digitale Assistenzplattform für Menschen mit ME/CFS, POTS, MCAS, Long COVID und ähnlichen Erkrankungen.
+          Sie hilft beim Dokumentieren, Auswerten und Teilen komplexer Gesundheitsverläufe – anonym, werbefrei und evidenzorientiert.
+        </p>
+        <p>
+          Die App funktioniert ohne Tracking und speichert Daten nur lokal oder mit expliziter Zustimmung. 
+          VIRENNA wurde gemeinsam mit Betroffenen entwickelt – für mehr Autonomie im Gesundheitssystem.
+        </p>
+        <a href="was-ist-virenna.html" class="btn tertiary">Zur Langversion</a>
+      </div>
+    </section>
+
+    <!-- 🔹 Funktionen / Feature-Kacheln -->
+    <section id="features" aria-labelledby="features-heading">
+      <div class="section-content">
+        <h2 id="features-heading">Funktionen im Überblick</h2>
+        <ul class="feature-grid">
+          <li>
+            <h3>🧩 Modular aufgebaut</h3>
+            <p>App, GPT-Unterstützung, Markdown & PDF – individuell nutzbar</p>
+          </li>
+          <li>
+            <h3>🛡️ Datensouverän</h3>
+            <p>Keine Cloudpflicht, keine Werbung, maximale Kontrolle</p>
+          </li>
+          <li>
+            <h3>📄 Arztbriefe & PDF-Dashboards</h3>
+            <p>Exportierbare Berichte für Ärzt:innen und Pflege</p>
+          </li>
+          <li>
+            <h3>🧠 Intelligente Empfehlungen</h3>
+            <p>Kontextbasierte Zusammenhänge ohne Diagnosedruck</p>
+          </li>
+          <li>
+            <h3>⚙️ Offlinefähig</h3>
+            <p>Funktioniert auch ohne Internet – markdownbasiert</p>
+          </li>
+          <li>
+            <h3>💡 Ethik statt Optimierung</h3>
+            <p>Keine „Ratschläge“ – nur Zusammenhänge & Kontext</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 🔹 Ethik-Bereich -->
+    <section id="ethics" aria-labelledby="ethics-heading">
+      <div class="section-content">
+        <h2 id="ethics-heading">Unsere Werte & Ethik</h2>
+        <p>
+          VIRENNA folgt einem ethischen Rahmen, der auf Würde, Teilhabe, Transparenz und Nicht-Ausbeutung basiert.
+          Keine Algorithmen zur Verhaltenssteuerung. Kein Verkauf deiner Daten. Keine unerwünschten Eingriffe.
+        </p>
+        <blockquote>
+          „Bei VIRENNA steht die Würde des Menschen im Mittelpunkt – nicht seine Optimierung.“
+        </blockquote>
+        <a href="manifest.html" class="btn tertiary">Zum Manifest</a>
+      </div>
+    </section>
+
+    <!-- 🔹 Demo / Screenshots -->
+    <section id="demo" aria-labelledby="demo-heading">
+      <div class="section-content">
+        <h2 id="demo-heading">Einblick in VIRENNA</h2>
+        <figure>
+          <img src="images/mockup-dashboard.png" alt="Screenshot: Symptom-Dashboard mit Zeitleiste und PDF-Exportoption" />
+          <figcaption>VIRENNA-Dashboard – visuelle Symptomverläufe & PDF-Berichte</figcaption>
+        </figure>
+        <figure>
+          <img src="images/mockup-analyse.png" alt="Screenshot: GPT-basierte Analyseansicht mit erklärenden Hinweisen" />
+          <figcaption>Kontextuelle Analyse mit KI – keine Diagnosen, sondern Erklärhilfen</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 🔹 CTA & Downloadbereich -->
+    <section id="contact" aria-labelledby="cta-heading">
+      <div class="section-content">
+        <h2 id="cta-heading">Starte mit VIRENNA</h2>
+        <p>
+          Die Basisfunktionen von VIRENNA sind kostenlos und werbefrei nutzbar.
+          Lade dir hier das Ressourcenpaket als ZIP-Datei herunter oder teste die Webdemo.
+        </p>
+
+        <!-- 📦 QR-Code Platzhalter -->
+        <div class="qr-download">
+          <img src="images/qr-placeholder.svg" alt="QR-Code zum Ressourcenpaket (Platzhalter)" />
+          <a href="downloads/virenna-resources.zip" class="btn primary">Ressourcenpaket herunterladen</a>
+        </div>
+        <p class="note">ZIP-Datei enthält Handbuch, Demo-Daten & Markdown-Templates</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- 🔹 Footer mit Rechtstexten -->
+  <footer role="contentinfo" class="footer">
+    <nav aria-label="Rechtliches">
+      <ul>
+        <li><a href="agb.html">AGB</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="manifest.html">Systemmanifest</a></li>
+      </ul>
+    </nav>
+    <p>© 2025 VIRENNA · Ethikorientierte MedTech · <span lang="en">All rights reserved.</span></p>
+  </footer>
+</body>
+</html>
