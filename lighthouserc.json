@@ -1,0 +1,17 @@
+{
+  "ci": {
+    "collect": {
+      "staticDistDir": ".",
+      "url": [
+        "/index.html",
+        "/agb.html",
+        "/datenschutz.html",
+        "/impressum.html",
+        "/manifest.html"
+      ]
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
+}
